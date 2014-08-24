@@ -15,6 +15,7 @@
 @property (nonatomic, weak) UIViewController *selectedViewController;
 @property (nonatomic, assign) NSUInteger selectedIndex;
 @property (nonatomic, weak) id <GGTabBarControllerDelegate> delegate;
+@property (nonatomic, strong) NSDictionary *tabBarAppearanceSettings;
 @property (nonatomic, assign) BOOL debug;
 @end
 

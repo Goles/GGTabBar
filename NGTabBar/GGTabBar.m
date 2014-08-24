@@ -7,6 +7,7 @@
 //
 
 #import "GGTabBar.h"
+#import "GGTabBarAppearanceKeys.h"
 
 static const NSInteger kSeparatorOffsetTag = 7000;
 static const NSInteger kMarginSeparatorOffsetTag = 8000;
@@ -16,6 +17,11 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
 @property (nonatomic, strong) NSMutableArray *buttons;
 @property (nonatomic, strong) NSMutableArray *separators; // Between-buttons separators
 @property (nonatomic, strong) NSMutableArray *marginSeparators; // Start/End Separators
+
+// Appearance
+@property (nonatomic, assign) CGFloat tabBarHeight;
+@property (nonatomic, strong) UIColor *tabBarBackgroundColor;
+@property (nonatomic, strong) UIColor *tabBarTintColor;
 @end
 
 @implementation GGTabBar
@@ -30,6 +36,7 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
         _separators = [[NSMutableArray alloc] init];
         _marginSeparators = [[NSMutableArray alloc] init];
         _viewControllers = viewControllers;
+        self.tabBarHeight = CGFLOAT_MIN;
         self.translatesAutoresizingMaskIntoConstraints = NO;
         [self initSubViewsWithControllers:_viewControllers];
         [self addHeightConstraints];
@@ -54,6 +61,21 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
     }
 
     _selectedButton = selectedButton;
+}
+
+- (void)setAppearance:(NSDictionary *)appearance
+{
+    if (appearance[kTabBarAppearanceBackgroundColor]) {
+        self.backgroundColor = self.tabBarBackgroundColor = appearance[kTabBarAppearanceBackgroundColor];
+    }
+
+    if (appearance[kTabBarAppearanceHeight]) {
+        self.tabBarHeight = [appearance[kTabBarAppearanceHeight] floatValue];
+    }
+
+    if (appearance[kTabBarAppearanceTint]) {
+        // Do something with the tint here.
+    }
 }
 
 - (void)startDebugMode
@@ -149,13 +171,16 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
 
 - (void)addHeightConstraints
 {
-    // The height of the TabBar matches the height of the TabBar buttons.
+    // Adjust the constraint multiplier and item depending if there's a custom tabBarHeight
+    CGFloat multiplier = self.tabBarHeight == CGFLOAT_MIN ? 1.5 : self.tabBarHeight;
+    id item = self.tabBarHeight == CGFLOAT_MIN ? [_buttons firstObject] : self;
+
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self
                                                      attribute:NSLayoutAttributeHeight
                                                      relatedBy:NSLayoutRelationEqual
-                                                        toItem:[_buttons firstObject]
+                                                        toItem:item
                                                      attribute:NSLayoutAttributeHeight
-                                                    multiplier:1.5
+                                                    multiplier:multiplier
                                                       constant:0.0]];
 }
 

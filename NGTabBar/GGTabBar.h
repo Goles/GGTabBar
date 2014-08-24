@@ -16,6 +16,7 @@
 @property (nonatomic, weak) UIViewController *selectedViewController;
 
 - (instancetype)initWithFrame:(CGRect)frame viewControllers:(NSArray *)viewControllers;
+- (void)setAppearance:(NSDictionary *)appearance;
 - (void)startDebugMode;
 @end
 
