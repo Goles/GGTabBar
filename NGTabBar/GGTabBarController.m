@@ -24,7 +24,7 @@
 
     _tabBarView = [[GGTabBar alloc] initWithFrame:CGRectZero viewControllers:_viewControllers];
     if (_tabBarAppearanceSettings) {
-#warning Return here
+        [_tabBarView setAppearance:_tabBarAppearanceSettings];
     }
     _tabBarView.delegate = self;
 
