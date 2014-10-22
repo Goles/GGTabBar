@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GGTabBar"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Simple UITabBar/UITabBarController replacement made by using AutoLayout"
   s.description  = "100% Made with Auto Layout customizable UITabBar or UITabBarController replacement. Forget CGRects and frames. Born out of the necessity of having a customizable UITabBar replacement that would be ready for any screen size and that adopted the more modern Auto Layout API."
   s.homepage     = "https://github.com/Goles/GGTabBar/"
