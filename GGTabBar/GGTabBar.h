@@ -15,7 +15,7 @@
 @property (nonatomic, weak) UIButton *selectedButton;
 @property (nonatomic, weak) UIViewController *selectedViewController;
 
-- (instancetype)initWithFrame:(CGRect)frame viewControllers:(NSArray *)viewControllers;
+- (instancetype)initWithFrame:(CGRect)frame viewControllers:(NSArray *)viewControllers appearance:(NSDictionary *)appearance;
 - (void)setAppearance:(NSDictionary *)appearance;
 - (void)startDebugMode;
 @end

@@ -22,13 +22,16 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
 @property (nonatomic, assign) CGFloat tabBarHeight;
 @property (nonatomic, strong) UIColor *tabBarBackgroundColor;
 @property (nonatomic, strong) UIColor *tabBarTintColor;
+
+// References to Constraints
+@property (nonatomic, weak) NSLayoutConstraint *heightConstraint;
 @end
 
 @implementation GGTabBar
 
 #pragma mark - Public API
 
-- (instancetype)initWithFrame:(CGRect)frame viewControllers:(NSArray *)viewControllers
+- (instancetype)initWithFrame:(CGRect)frame viewControllers:(NSArray *)viewControllers appearance:(NSDictionary *)appearance
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -39,6 +42,11 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
         self.tabBarHeight = CGFLOAT_MIN;
         self.translatesAutoresizingMaskIntoConstraints = NO;
         [self initSubViewsWithControllers:_viewControllers];
+
+        if (appearance) {
+            [self setAppearance:appearance];
+        }
+
         [self addHeightConstraints];
         [self addAllLayoutConstraints];
     }
@@ -172,16 +180,25 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
 - (void)addHeightConstraints
 {
     // Adjust the constraint multiplier and item depending if there's a custom tabBarHeight
-    CGFloat multiplier = self.tabBarHeight == CGFLOAT_MIN ? 1.5 : self.tabBarHeight;
-    id item = self.tabBarHeight == CGFLOAT_MIN ? [_buttons firstObject] : self;
+    CGFloat multiplier = self.tabBarHeight == CGFLOAT_MIN ? 1.5 : 0.0;
 
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self
+    id item = self.tabBarHeight == CGFLOAT_MIN ? [_buttons firstObject] : nil;
+    CGFloat layoutConstant = item ? 0.0 : self.tabBarHeight;
+
+    if (_heightConstraint) {
+        [self removeConstraint:_heightConstraint];
+        _heightConstraint = nil;
+    }
+
+    _heightConstraint = [NSLayoutConstraint constraintWithItem:self
                                                      attribute:NSLayoutAttributeHeight
                                                      relatedBy:NSLayoutRelationEqual
                                                         toItem:item
                                                      attribute:NSLayoutAttributeHeight
                                                     multiplier:multiplier
-                                                      constant:0.0]];
+                                                      constant:layoutConstant];
+    
+    [self addConstraint:_heightConstraint];
 }
 
 - (void)addAllLayoutConstraints

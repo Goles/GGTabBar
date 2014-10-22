@@ -22,10 +22,7 @@
     [super viewDidLoad];
     self.view.frame = [[UIScreen mainScreen] bounds];
 
-    _tabBarView = [[GGTabBar alloc] initWithFrame:CGRectZero viewControllers:_viewControllers];
-    if (_tabBarAppearanceSettings) {
-        [_tabBarView setAppearance:_tabBarAppearanceSettings];
-    }
+    _tabBarView = [[GGTabBar alloc] initWithFrame:CGRectZero viewControllers:_viewControllers appearance:_tabBarAppearanceSettings];
     _tabBarView.delegate = self;
 
     _presentationView = [[UIView alloc] init];

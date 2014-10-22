@@ -10,9 +10,10 @@
 		C802F1D41942CDE100A448B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C802F1D31942CDE100A448B4 /* main.m */; };
 		C802F1D71942CDE100A448B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C802F1D61942CDE100A448B4 /* AppDelegate.m */; };
 		C802F1D91942CDE100A448B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C802F1D81942CDE100A448B4 /* Images.xcassets */; };
+		C82018FD19F7DE7500728423 /* GGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C82018F819F7DE7500728423 /* GGTabBar.m */; };
+		C82018FE19F7DE7500728423 /* GGTabBarAppearanceKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = C82018FA19F7DE7500728423 /* GGTabBarAppearanceKeys.m */; };
+		C82018FF19F7DE7500728423 /* GGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82018FC19F7DE7500728423 /* GGTabBarController.m */; };
 		C874BD941944E01A00675824 /* GGTabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C874BD931944E01A00675824 /* GGTabBarTests.m */; };
-		C8861A2E1943DFC800976D0A /* GGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C8861A291943DFC800976D0A /* GGTabBar.m */; };
-		C8861A2F1943DFC800976D0A /* GGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8861A2C1943DFC800976D0A /* GGTabBarController.m */; };
 		C8861A391943E02B00976D0A /* TestViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = C8861A371943E02B00976D0A /* TestViewController1.m */; };
 		C8861A3A1943E02B00976D0A /* TestViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8861A381943E02B00976D0A /* TestViewController1.xib */; };
 		C8861A3E1943E3A500976D0A /* TestViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = C8861A3C1943E3A500976D0A /* TestViewController2.m */; };
@@ -42,12 +43,14 @@
 		C802F1D81942CDE100A448B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C802F1DE1942CDE100A448B4 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C802F1E31942CDE100A448B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C82018F619F7DE7500728423 /* GGTabBar-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGTabBar-Private.h"; sourceTree = "<group>"; };
+		C82018F719F7DE7500728423 /* GGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBar.h; sourceTree = "<group>"; };
+		C82018F819F7DE7500728423 /* GGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBar.m; sourceTree = "<group>"; };
+		C82018F919F7DE7500728423 /* GGTabBarAppearanceKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBarAppearanceKeys.h; sourceTree = "<group>"; };
+		C82018FA19F7DE7500728423 /* GGTabBarAppearanceKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBarAppearanceKeys.m; sourceTree = "<group>"; };
+		C82018FB19F7DE7500728423 /* GGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBarController.h; sourceTree = "<group>"; };
+		C82018FC19F7DE7500728423 /* GGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBarController.m; sourceTree = "<group>"; };
 		C874BD931944E01A00675824 /* GGTabBarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBarTests.m; sourceTree = "<group>"; };
-		C8861A281943DFC800976D0A /* GGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBar.h; sourceTree = "<group>"; };
-		C8861A291943DFC800976D0A /* GGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBar.m; sourceTree = "<group>"; };
-		C8861A2A1943DFC800976D0A /* GGTabBar-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGTabBar-Private.h"; sourceTree = "<group>"; };
-		C8861A2B1943DFC800976D0A /* GGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBarController.h; sourceTree = "<group>"; };
-		C8861A2C1943DFC800976D0A /* GGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBarController.m; sourceTree = "<group>"; };
 		C8861A361943E02B00976D0A /* TestViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController1.h; sourceTree = "<group>"; };
 		C8861A371943E02B00976D0A /* TestViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController1.m; sourceTree = "<group>"; };
 		C8861A381943E02B00976D0A /* TestViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController1.xib; sourceTree = "<group>"; };
@@ -101,7 +104,7 @@
 		C802F1D01942CDE100A448B4 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				C8861A271943DFC800976D0A /* GGTabBar */,
+				C82018F519F7DE7500728423 /* GGTabBar */,
 				C802F1D51942CDE100A448B4 /* AppDelegate.h */,
 				C802F1D61942CDE100A448B4 /* AppDelegate.m */,
 				C8861A351943E02B00976D0A /* ViewControllers */,
@@ -137,17 +140,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C8861A271943DFC800976D0A /* GGTabBar */ = {
+		C82018F519F7DE7500728423 /* GGTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				C8861A281943DFC800976D0A /* GGTabBar.h */,
-				C8861A291943DFC800976D0A /* GGTabBar.m */,
-				C8861A2A1943DFC800976D0A /* GGTabBar-Private.h */,
-				C8861A2B1943DFC800976D0A /* GGTabBarController.h */,
-				C8861A2C1943DFC800976D0A /* GGTabBarController.m */,
+				C82018F619F7DE7500728423 /* GGTabBar-Private.h */,
+				C82018F719F7DE7500728423 /* GGTabBar.h */,
+				C82018F819F7DE7500728423 /* GGTabBar.m */,
+				C82018F919F7DE7500728423 /* GGTabBarAppearanceKeys.h */,
+				C82018FA19F7DE7500728423 /* GGTabBarAppearanceKeys.m */,
+				C82018FB19F7DE7500728423 /* GGTabBarController.h */,
+				C82018FC19F7DE7500728423 /* GGTabBarController.m */,
 			);
 			name = GGTabBar;
-			path = ../../NGTabBar;
+			path = ../../GGTabBar;
 			sourceTree = "<group>";
 		};
 		C8861A351943E02B00976D0A /* ViewControllers */ = {
@@ -271,13 +276,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8861A431943E3D000976D0A /* TestViewController3.m in Sources */,
-				C8861A2F1943DFC800976D0A /* GGTabBarController.m in Sources */,
+				C82018FE19F7DE7500728423 /* GGTabBarAppearanceKeys.m in Sources */,
+				C82018FF19F7DE7500728423 /* GGTabBarController.m in Sources */,
 				C8861A3E1943E3A500976D0A /* TestViewController2.m in Sources */,
 				C8861A481943E40400976D0A /* TestViewController4.m in Sources */,
 				C802F1D71942CDE100A448B4 /* AppDelegate.m in Sources */,
-				C8861A2E1943DFC800976D0A /* GGTabBar.m in Sources */,
 				C802F1D41942CDE100A448B4 /* main.m in Sources */,
 				C8861A391943E02B00976D0A /* TestViewController1.m in Sources */,
+				C82018FD19F7DE7500728423 /* GGTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
