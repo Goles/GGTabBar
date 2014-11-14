@@ -31,7 +31,7 @@ Just copy the `GGTabBar` folder into your Xcode project.
 
 ``` objective-c
 GGTabBarController *tabBar = [[GGTabBarController alloc] init];
-tabBar.tabBarAppearanceSettings = @[kTabBarAppearanceHeight : @(100.0)]; // in points
+tabBar.tabBarAppearanceSettings = @{kTabBarAppearanceHeight : @(100.0)}; // in points
 tabBar.viewControllers = @[vc1, vc2, vc3, vc4];
 self.window.rootViewController = tabBar;
 ```
