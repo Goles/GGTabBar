@@ -10,14 +10,18 @@ to others who adventure into the land of Auto Layout.
 
 ### Limitations :bomb:
 
-* Still need to add customization options (background color`, `tint`, `style`, `background image`, etc.).
+* Still need to add customization options (`background color`, `tint`, `style`, `background image`, etc.).
 * The tab bar items are UIButtons (no `TabBarItem` abstraction in a `UIView`).
-* Haven't tested rotation support. (should work?)
-* No Pod (Cocoapods) yet.
 * No `more` tab if you add more than 5 View Controllers.
 * Still need to add *more* integration tests.
 
 ## Install
+
+### Cocoapods
+
+`pod 'GGTabBar', '~> 0.0.2'`
+
+### Xcode
 
 Just copy the `GGTabBar` folder into your Xcode project.
 
