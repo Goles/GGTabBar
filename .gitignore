@@ -3,7 +3,7 @@ build/*
 *.perspective
 *.perspectivev3
 *.pbxuser
-*.xcworkspace
+# *.xcworkspace
 *.mode1
 *.mode2v3
 *.mode1v3
