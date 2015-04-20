@@ -6,22 +6,18 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B2AC5159-6EC6-4DA3-9F15-152B77536821</string>
-	<key>IDESourceControlProjectName</key>
-	<string>Example</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4C2778BBDC36A145D2B228DD83189CA3DBEAA7FF</key>
-		<string>github.com:Goles/GGTabBar.git</string>
+		<string>github.com:Goles/GGTabBar</string>
 	</dict>
-	<key>IDESourceControlProjectPath</key>
-	<string>Example/Example.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4C2778BBDC36A145D2B228DD83189CA3DBEAA7FF</key>
-		<string>../../..</string>
+		<string>GGTabBar/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:Goles/GGTabBar.git</string>
+	<string>github.com:Goles/GGTabBar</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
