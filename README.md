@@ -4,7 +4,7 @@ GGTabBar is a *simple* UITabBar & UITabBarController replacement that uses Auto 
 for constructing the GUI. I created it for curiosity, but it may be useful
 to others who adventure into the land of Auto Layout.
 
-[![Build Status](https://travis-ci.org/XVimProject/XVim.svg?branch=develop)](https://travis-ci.org/XVimProject/XVim)
+[![Build Status](https://travis-ci.org/Goles/GGTabBar.svg?branch=master)](https://travis-ci.org/Goles/GGTabBar)
 
 ![screenshot](screenshot.png)
 
