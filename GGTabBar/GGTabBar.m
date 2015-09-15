@@ -96,8 +96,10 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
 #pragma mark - UIView
 - (void)didMoveToSuperview
 {
+    NSParameterAssert(_buttons.count > 0);
+
     // When the app is first launched set the selected button to be the first button
-    [self setSelectedButton:[_buttons firstObject]];
+    [self setSelectedButton:[_buttons objectAtIndex:_selectedButtonIndex]];
 }
 
 #pragma mark - Delegate
@@ -105,7 +107,12 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
 - (void)tabButtonPressed:(id)sender
 {
     NSUInteger buttonIndex = [_buttons indexOfObject:sender];
-    [_delegate tabBar:self didPressButton:sender atIndex:buttonIndex];
+    
+    // Check double selected button
+    if (buttonIndex != _selectedButtonIndex) {
+        _selectedButtonIndex = buttonIndex;
+        [_delegate tabBar:self didPressButton:sender atIndex:buttonIndex];
+    }
 }
 
 #pragma mark - Subviews

@@ -27,7 +27,8 @@
 
     _presentationView = [[UIView alloc] init];
     _presentationView.translatesAutoresizingMaskIntoConstraints = NO;
-
+    _tabBarView.selectedButtonIndex = self.selectedIndex;
+    
     [self.view addSubview:_tabBarView];
     [self.view addSubview:_presentationView];
 }
@@ -51,8 +52,11 @@
     // Select first view controller on first Launch.
     if (!_isFirstAppear) {
         _isFirstAppear = YES;
-        [self selectViewController:[_viewControllers firstObject]];
+        UIViewController *firstViewController = [_viewControllers objectAtIndex:self.selectedIndex];
+        [self selectViewController:firstViewController];
     }
+    
+    NSLog(@"SelectedIndex:%tu",self.selectedIndex);
 }
 
 #pragma mark - Delegation
@@ -66,6 +70,10 @@
             [self selectViewController:selectedViewController withButton:button];
         }
     }
+    
+    self.selectedIndex = tabIndex;
+    
+    NSLog(@"SelectedIndex:%tu",self.selectedIndex);
 
     [self selectViewController:selectedViewController withButton:button];
 }

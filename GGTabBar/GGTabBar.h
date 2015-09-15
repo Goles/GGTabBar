@@ -14,6 +14,7 @@
 @property (nonatomic, weak) id<GGTabBarDelegate> delegate;
 @property (nonatomic, weak) UIButton *selectedButton;
 @property (nonatomic, weak) UIViewController *selectedViewController;
+@property (nonatomic, assign) NSUInteger selectedButtonIndex;
 
 - (instancetype)initWithFrame:(CGRect)frame viewControllers:(NSArray *)viewControllers appearance:(NSDictionary *)appearance;
 - (void)setAppearance:(NSDictionary *)appearance;
