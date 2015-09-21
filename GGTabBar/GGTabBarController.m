@@ -55,8 +55,6 @@
         UIViewController *firstViewController = [_viewControllers objectAtIndex:self.selectedIndex];
         [self selectViewController:firstViewController];
     }
-    
-    NSLog(@"SelectedIndex:%tu",self.selectedIndex);
 }
 
 #pragma mark - Delegation
@@ -73,8 +71,6 @@
     
     self.selectedIndex = tabIndex;
     
-    NSLog(@"SelectedIndex:%tu",self.selectedIndex);
-
     [self selectViewController:selectedViewController withButton:button];
 }
 
