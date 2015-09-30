@@ -31,6 +31,9 @@
     TestViewController4 *vc4 = [[TestViewController4 alloc] init];
 
     tabBar.viewControllers = @[vc1, vc2, vc3, vc4];
+    
+    tabBar.selectedIndex = 3;
+
     self.window.rootViewController = tabBar;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
