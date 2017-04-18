@@ -1,4 +1,4 @@
-#GGTabBar
+# GGTabBar
 
 GGTabBar is a *simple* UITabBar & UITabBarController replacement that uses Auto Layout
 for constructing the GUI. I created it for curiosity, but it may be useful
