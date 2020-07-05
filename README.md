@@ -19,7 +19,7 @@ to others who adventure into the land of Auto Layout.
 
 ## Install
 
-### Cocoapods
+### CocoaPods
 
 `pod 'GGTabBar', '~> 0.0.2'`
 
